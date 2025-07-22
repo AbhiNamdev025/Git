@@ -1,0 +1,126 @@
+h2 {
+  color: blue;
+}
+
+.highlight {
+  background-color: yellow;
+}
+
+#main-title {
+  font-weight: bold;
+  font-size: 2em;
+}
+
+h1,
+h2,
+p {
+  font-family: Arial, sans-serif;
+}
+
+div span {
+  color: red;
+}
+
+ul > li {
+  color: green;
+}
+
+h3 + p {
+  color: orange;
+}
+
+a {
+  text-decoration: none;
+  font-weight: lighter;
+  color: red;
+}
+a:hover {
+  color: purple;
+}
+a:visited {
+  text-decoration: underline;
+}
+li:first-child {
+  font-weight: bold;
+}
+
+.content {
+  text-align: justify;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+/* not working checked */
+
+input[type="checkbox"]:checked {
+  border: 5px double green;
+}
+
+h3,
+p {
+  font-size: 16px;
+}
+
+.note {
+  background-color: gray;
+}
+
+#footer {
+  text-align: center;
+  vertical-align: middle;
+}
+
+blockquote strong {
+  font-style: italic;
+  color: red;
+}
+
+.menu > li {
+  color: blue;
+}
+
+label + input {
+  font-weight: bold;
+}
+
+.container img {
+  height: 200px;
+  width: 200px;
+}
+
+img ~ p {
+  color: gray;
+}
+
+input[type="password"] {
+  border: 2px solid red;
+}
+
+img[src$=".png"] {
+  border: 1px solid black;
+}
+
+a[href^="https"] {
+  font-weight: bold;
+  color: darkslategray;
+}
+
+input[placeholder] {
+  background-color: gray;
+}
+
+.card .title {
+  color: green;
+  text-transform: uppercase;
+}
+
+p {
+  text-align: justify;
+}
+
+.card a:hover {
+  text-decoration: underline;
+  font-weight: bold;
+}

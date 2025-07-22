@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background-color: black;
+  color: white;
+  text-align: center;
+  width: 100vw;
+  height: 10vh;
+  display: block;
+  font-size: xx-large;
+  padding-top: 1rem;
+  position: sticky;
+  top: 0;
+}
+
+.nav {
+  position: sticky;
+  top: 0px;
+  z-index: 1000;
+}
+nav {
+  display: inline-block;
+  background-color: #333;
+  width: 100vw;
+  height: 9vh;
+  text-align: left;
+  padding: 2.5rem 0px 0px 10px;
+  font-size: larger;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+.nav-links {
+  display: inline-block;
+  margin-left: 2rem;
+}
+.nav-links a {
+  margin-left: 2rem;
+  color: white;
+  border-radius: 10px;
+  padding: 12px 10px;
+}
+.nav-links a:hover {
+  background-color: aliceblue;
+  color: black;
+}
+
+.logo {
+  margin-left: 1rem;
+  display: inline-block;
+  font-weight: bolder;
+  color: white;
+}
+
+main {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  padding: 1rem;
+  height: fit-content;
+}
+
+.icons img {
+  height: 20px;
+  width: 20px;
+}
+
+footer {
+  text-align: center;
+  font-size: large;
+  height: 30vh;
+}
+
+.simple-footer {
+  background-color: #333;
+  height: 2.2rem;
+  padding-top: 15px;
+}
+
+.social-footer {
+  background-color: #444;
+  height: 7vh;
+  padding: 10px;
+}
+
+.icons {
+  margin-top: 5px;
+}
+
+.fixed-footer {
+  position: fixed;
+  bottom: 0;
+  height: 2rem;
+  color: white;
+  background-color: black;
+  text-align: center;
+  width: 100%;
+  padding-top: 15px;
+}

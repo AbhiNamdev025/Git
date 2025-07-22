@@ -1,0 +1,100 @@
+/* 1. Descendant combinator (space) */
+.container .descendant {
+  background: lightblue;
+}
+
+/* 2. Child combinator (>) */
+.container > .child {
+  background: lightgreen;
+}
+
+/* 3. Next sibling combinator (+) */
+.title + .next-sibling {
+  background: lightcoral;
+}
+
+/* 4. Subsequent sibling combinator (~) */
+.title ~ .subsequent-sibling {
+  background: lightgoldenrodyellow;
+}
+
+/* Basic box style */
+div {
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid #333;
+}
+
+/* [attr] — elements with the attribute */
+[data-active] {
+  background-color: lightgreen;
+}
+
+/* [attr="value"] — exact match */
+input[type="text"] {
+  border: 2px solid blue;
+}
+
+/* [attr~="value"]  */
+[class~="highlight"] {
+  background-color: yellow;
+}
+
+/* [attr|="value"] — value */
+[lang|="en"] {
+  color: navy;
+}
+
+/* [attr^="value"] — starts with */
+a[href^="https"] {
+  color: green;
+}
+
+/* [attr$="value"] — ends with */
+a[href$=".pdf"] {
+  color: red;
+}
+
+/* Combining multiple selectors */
+input[type="email"][required] {
+  background-color: #000;
+}
+
+/* :hover -  */
+.hover-btn:hover {
+  background-color: lightblue;
+  color: darkblue;
+}
+
+/* :active */
+.active-link:active {
+  color: red;
+  font-weight: bold;
+}
+
+/* :focus */
+input:focus {
+  border: 2px solid green;
+  background-color: #eaffea;
+}
+
+/* :visited  */
+a.visited:visited {
+  color: purple;
+}
+
+/* :first-child */
+li:first-child {
+  font-weight: bold;
+  color: blue;
+}
+
+/* :last-child */
+li:last-child {
+  color: green;
+}
+
+/* :nth-child(n) */
+li:nth-child(2) {
+  background-color: red;
+}

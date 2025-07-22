@@ -1,0 +1,60 @@
+div {
+  height: 100px;
+  width: 100px;
+  background-color: brown;
+  position: relative;
+  animation-name: eg;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes eg {
+  0% {
+    background-color: red;
+    left: 0px;
+    top: 0px;
+  }
+  25% {
+    background-color: yellow;
+    left: 200px;
+    top: 0px;
+  }
+  50% {
+    background-color: blue;
+    left: 200px;
+    right: 200px;
+  }
+  75% {
+    background-color: green;
+    left: 0px;
+    top: 200px;
+  }
+  100% {
+    background-color: red;
+    left: 0px;
+    top: 0px;
+  }
+}
+
+section {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  animation-name: eg2;
+  animation-duration: 4s;
+}
+
+@keyframes eg2 {
+  from {
+    background-color: red;
+    opacity: 1;
+    transform: scale(2);
+  }
+  to {
+    background-color: red;
+    opacity: 0;
+  }
+}

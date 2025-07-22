@@ -1,0 +1,154 @@
+/* GROUP SELECTOR
+
+h1,
+h2,
+p {
+  color: #333;
+}
+
+Type Selector
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+Attribute Selector
+input[type="text"] {
+  border: 2px solid #00fbff;
+  padding: 5px;
+}
+input[type="email"] {
+  border: 2px dashed #00fbff;
+  padding: 5px;
+}
+img[src^="https"] {
+  border: 3px dashed green;
+  padding: 10px;
+  background-color: #f0f8ff;
+}
+
+COMBINATORS
+
+p {
+  color: green;
+}
+div p {
+  color: yellow;
+}
+div > p {
+  color: red;
+}
+section ~ h1 {
+  background-color: green;
+}
+
+PSEUDO CLASSES
+
+button:hover {
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+input:focus {
+  outline: 3px solid #ffc107;
+}
+a:hover {
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+a:focus {
+  outline: 3px solid #ffc107;
+}
+a:visited {
+  background-color: red;
+}
+a:active {
+  background-color: cyan;
+}
+
+PSEUDO ELEMENTS
+
+.para::first-letter {
+  font-weight: bold;
+  font-size: 2rem;
+  color: black;
+}
+.para::first-line {
+  font-style: italic;
+  color: blue;
+}
+
+input::placeholder {
+  font-style: italic;
+  color: red;
+}
+::selection {
+  color: red;
+  background-color: yellow;
+}
+
+::marker {
+  color: red;
+  font-size: 23px;
+}
+
+h1::before {
+  content: url(#);
+}
+h1::after {
+  content: url(#);
+} */
+
+/* p {
+  color: red;
+}
+.special {
+  color: green !important;
+}
+#highlight {
+  color: black;
+}
+p .special {
+  color: blue;
+}
+#highlight.special {
+  color: purple;
+}
+
+p#highlight.special {
+  color: pink;
+} */
+body {
+  margin: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  position: fixed;
+  background-color: #f1f1f1;
+  width: 25%;
+  height: 100%;
+  overflow: auto;
+}
+
+li a {
+  display: block;
+  color: #000;
+  text-decoration: none;
+  padding: 8px 16px;
+}
+li a:active {
+  color: white;
+  background-color: #04aa6d;
+}
+li a:hover:not(:active) {
+  background-color: #555;
+  color: white;
+}
+li a:hover {
+  border-right: 5px solid skyblue;
+}

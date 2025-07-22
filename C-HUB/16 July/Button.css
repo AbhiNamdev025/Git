@@ -1,0 +1,106 @@
+.buttons {
+  width: 90vw;
+}
+h2 {
+  text-align: center;
+}
+
+.button:hover {
+  transform: scale(1.03);
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  display: inline-block;
+  border-radius: 10px;
+  margin-top: 5rem;
+}
+/* Primary */
+.Primary button {
+  background-color: #007bff;
+}
+.Primary button:hover {
+  background-color: #0359b5;
+}
+/* Secondary */
+.Secondary button {
+  background-color: #6c757d;
+}
+
+.Secondary button:hover {
+  background-color: #4e5052;
+}
+/* Outtline */
+.Outline button {
+  background-color: transparent;
+  color: #007bff;
+  border: 2px solid #007bff;
+  border-radius: 20px;
+}
+
+.Outline button:hover {
+  background-color: #007bffd0;
+  color: white;
+}
+/* Danger */
+
+.Danger button {
+  background-color: #dc3545;
+}
+
+.Danger button:hover {
+  background-color: maroon;
+}
+/* Success */
+.Success button {
+  background-color: #28a745;
+}
+.Success button:hover {
+  background-color: green;
+}
+
+/* Ghost */
+
+.Ghost button {
+  background-color: transparent;
+  color: #6c757d;
+  border: 1px solid transparent;
+}
+
+.Ghost button:hover {
+  text-decoration: underline;
+}
+/* Icon */
+.Icon button {
+  background-color: beige;
+  color: black;
+  border-radius: 100%;
+}
+
+.Icon button:hover {
+  background-color: bisque;
+}
+
+/* Rounded */
+
+.Rounded button {
+  background-color: #17a2b8;
+  border-radius: 20px;
+}
+.Rounded button:hover {
+  background-color: aqua;
+}
+
+/* Block */
+.Block button {
+  background-color: yellow;
+  width: 90vw;
+}
+
+.Block button:hover {
+  background-color: rgb(132, 132, 19);
+}

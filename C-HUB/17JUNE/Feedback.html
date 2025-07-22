@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FEEDBACK FORM</title>
+</head>
+
+<body>
+    <center>
+        <div class="feedbackform"  >
+
+            <h1><u><i>Feedback Form</i></u></h1>
+            <hr>
+            <form>
+                <label for="name"><i>Name:</i></label><br><br>
+                <input type="text" id="name" name="name" required><br><br>
+
+                <label for="email"><i>Email:</i></label><br><br>
+                <input type="email" id="email" name="email" ><br><br>
+                    <hr>
+                <label for="City"><i>Your City:</i></label><br><br>
+
+                <select id="City" name="City" required>
+                    <option value="">Select your city</option>
+                    <option value="ambala">Ambala</option>
+                    <option value="naraingarh">Naraingarh</option>
+                    <option value="chandigarh">Chandigarh</option>
+                    <option value="pune">Pune</option>
+                    <option value="delhi">Delhi</option>
+                </select>
+                <br><br>
+                    <hr>
+                <label for="feedback"><i>Your Feedback:</i></label><br><br>
+                <textarea id="feedback" name="feedback" rows="8" cols="40" required></textarea><br><br>
+                <hr>
+                <div class="checkboxes" aria-required="true">
+                    <label>Services Bought</label>
+                    <BR>
+                    <br>
+                    <input type="checkbox" id="MERN STACK" value="MERN" name="MERN STACK">
+                    <label> MERN STACK WEBSITE </label>
+                    <input type="checkbox" id="FULL STACK" value="FULL" name="MERN STACK">
+                    <label> JAVA FULL STACK WEBSITE </label>
+                    <input type="checkbox" id="AI/ML" value="AI/ML" name="AI/ML">
+                    <label> AI/ML</label><br><br>
+                    <input type="checkbox" id="GAME DEV" value="GAME DEV" name="GAME DEV">
+                    <label> GAME DEVLOPMENT</label>
+                    <input type="checkbox" id="APP DEV" value="APP DEV" name="APP DEV">
+                    <label> APP DEVLOPMENT</label><br><br>
+                </div>
+                <hr>
+                <div class="dates" aria-required="true">
+
+                    <label>SERVICE CYCLE</label><br>
+                    <br>
+                    <label>REQUESTED ON </label> <br><br>
+                    <input type="date" id="reqdate" name="reqdate" value="reqdate"> <br><br>
+
+                    <label>GOT ON</label><br><br>
+                    <input type="date" id="gettingdate" name="gettingdate" value="gettingdate"> <br><br>
+
+                </div><br>
+                <hr>
+                <div aria-required="true">
+                    <label for="feedback"><i>Your Experience:</i></label><br><br>
+
+                    <input type="radio" id="fair" name="fair" value="fair">
+                    <label>POOR EXPERIENCE</label>
+                    <input type="radio" id="good" name="experience" value="good">
+                    <label>GOOD EXPERIENCE</label>
+                    <input type="radio" id="best" name="best" value="best">
+                    <label>SATISFIED</label>
+                    <br>
+                    <br>
+                </div>
+                <hr>
+                <input type="submit" value="Submit">
+                <input type="button" value="Reset">
+            </form>
+
+        </div>
+    </center>
+</body>
+
+</html>

@@ -1,0 +1,2 @@
+Fixed
+sticky positioning
