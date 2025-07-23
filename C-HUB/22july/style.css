@@ -7,23 +7,18 @@ body {
 }
 
 .container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
+  display: block;
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
 }
 
 .component-box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100px;
+  margin: 20px 0;
+  display: inline-block;
 }
 
-/* General Buttons */
+/* Buttons */
 button,
 label {
   padding: 10px 20px;
@@ -35,45 +30,48 @@ label {
   font-size: 14px;
 }
 
-/* Modal Popup */
-.modal-toggle {
-  display: none;
-}
-
-.modal-btn {
-  background: #4a6bff;
+.modal-btn,
+.overlay-btn {
+  background: lightseagreen;
   color: white;
   margin: 10px;
 }
 
 .close-btn {
-  background: #6c757d !important;
+  background: gray !important;
+}
+
+/* Modal Popup */
+.modal-toggle {
+  display: none;
 }
 
 .modal {
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
   background: rgba(0, 0, 0, 0.7);
-  display: none;
-  justify-content: center;
-  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-align: center;
   z-index: 1000;
 }
 
 .modal-content {
   background: white;
+  display: inline-block;
   padding: 25px;
   border-radius: 10px;
+  margin-top: 15vh;
   width: 300px;
-  text-align: center;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .modal-toggle:checked + .modal {
-  display: flex;
+  visibility: visible;
+  opacity: 1;
 }
 
 /* Tooltip */
@@ -100,35 +98,34 @@ label {
   padding: 8px 12px;
   border-radius: 6px;
   opacity: 0;
-  transition: opacity 0.3s ease;
+  visibility: hidden;
+  transition: 0.3s ease;
   white-space: nowrap;
   font-size: 13px;
   margin-bottom: 10px;
-  z-index: 1;
+  z-index: 10;
 }
 
 .tooltip-container:hover .tooltip {
   opacity: 1;
+  visibility: visible;
 }
 
 /* Slide-in Notification */
 .slide-box {
   position: fixed;
   bottom: 20px;
-  right: 20px;
+  right: -300px;
   padding: 12px 20px;
   background: #38b000;
   color: white;
   border-radius: 6px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
-  animation: slidein 0.5s ease forwards;
+  animation: slideIn 0.5s forwards;
   z-index: 999;
 }
 
-@keyframes slidein {
-  from {
-    right: -300px;
-  }
+@keyframes slideIn {
   to {
     right: 20px;
   }
@@ -137,21 +134,15 @@ label {
 /* Hover Card */
 .hover-card {
   position: relative;
+  display: inline-block;
 }
 
 .profile-preview {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+  display: inline-block;
   padding: 8px 15px;
   border-radius: 6px;
   background: #e9ecef;
   cursor: pointer;
-  transition: background 0.2s ease;
-}
-
-.profile-preview:hover {
-  background: #dee2e6;
 }
 
 .profile-img {
@@ -159,6 +150,8 @@ label {
   height: 36px;
   border-radius: 50%;
   object-fit: cover;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .card-popup {
@@ -184,21 +177,17 @@ label {
   display: none;
 }
 
-.overlay-btn {
-  background: #d90429;
-  color: white;
-}
-
 .overlay {
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
   background: rgba(0, 0, 0, 0.95);
-  display: none;
-  justify-content: center;
-  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s ease;
+  text-align: center;
   z-index: 1000;
 }
 
@@ -207,10 +196,12 @@ label {
   background: #1a1a1a;
   padding: 30px;
   border-radius: 10px;
+  display: inline-block;
+  margin-top: 20vh;
   max-width: 350px;
-  text-align: center;
 }
 
 .overlay-toggle:checked + .overlay {
-  display: flex;
+  visibility: visible;
+  opacity: 1;
 }
