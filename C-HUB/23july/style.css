@@ -1,0 +1,97 @@
+input[type="checkbox"] {
+  display: none;
+}
+
+.labels {
+  margin: 4rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.labels label {
+  background-color: rgb(11, 92, 118);
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  padding: 10px;
+  color: white;
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toasts {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 1000;
+}
+
+.toast {
+  display: none;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 15px 20px;
+  width: 275px;
+  font-size: 1rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-left: 12px solid black;
+  font-weight: bold;
+  position: relative;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+input[type="checkbox"]:checked + .toast {
+  display: block;
+}
+
+.cross {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  color: #888;
+}
+
+.success {
+  border-left-color: green;
+  color: green;
+}
+.error {
+  border-left-color: red;
+  color: red;
+}
+.info {
+  border-left-color: blue;
+  color: blue;
+}
+.warning {
+  border-left-color: orange;
+  color: orange;
+}
+.loading {
+  border-left-color: goldenrod;
+  color: goldenrod;
+}
+.retry {
+  border-left-color: purple;
+  color: purple;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

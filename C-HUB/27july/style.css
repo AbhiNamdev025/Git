@@ -1,0 +1,57 @@
+* {
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+.scene {
+  perspective: 1000px;
+  margin: 30px auto;
+  width: 200px;
+  height: 200px;
+}
+
+.box {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: linear-gradient(100deg, red, blue);
+  border-radius: 10px;
+}
+
+.box:hover {
+  transform: rotateZ(60deg) translateZ(1px) scale3d(1.1, 1.1, 1.1);
+}
+
+.flip-scene {
+  perspective: 1000px;
+  margin: 30px auto;
+  width: 200px;
+  height: 200px;
+}
+
+.cards {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  height: 100%;
+  width: 100%;
+}
+.cards:hover {
+  transform: rotateY(180deg) scale(1.2);
+}
+
+.front-card,
+.back-card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+}
+
+.front-card {
+  background: linear-gradient(10deg, black, red);
+}
+.back-card {
+  background: radial-gradient(circle, red, skyblue);
+  transform: rotateY(180deg);
+}

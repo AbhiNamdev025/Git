@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toasts</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="labels">
+      <label for="success">✅ Success</label>
+      <label for="error">❌ Error</label>
+      <label for="warning">⚠️ Warning</label>
+      <label for="info">ℹ️ Info</label>
+      <label for="loading">⏳ Loading</label>
+      <label for="retry">🔄 Retry</label>
+    </div>
+
+    <div class="toasts">
+      <input type="checkbox" id="success" />
+      <div class="toast success">
+        ✅ Success message
+        <label for="success" class="cross">&times;</label>
+      </div>
+
+      <input type="checkbox" id="error" />
+      <div class="toast error">
+        ❌ Error message
+        <label for="error" class="cross">&times;</label>
+      </div>
+
+      <input type="checkbox" id="warning" />
+      <div class="toast warning">
+        ⚠️ Warning message
+        <label for="warning" class="cross">&times;</label>
+      </div>
+
+      <input type="checkbox" id="info" />
+      <div class="toast info">
+        ℹ️ Info message
+        <label for="info" class="cross">&times;</label>
+      </div>
+
+      <input type="checkbox" id="loading" />
+      <div class="toast loading">
+        ⏳ Loading message
+        <label for="loading" class="cross">&times;</label>
+      </div>
+
+      <input type="checkbox" id="retry" />
+      <div class="toast retry">
+        🔄 Retry message
+        <label for="retry" class="cross">&times;</label>
+      </div>
+    </div>
+  </body>
+</html>
