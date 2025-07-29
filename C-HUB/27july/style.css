@@ -10,15 +10,15 @@
 }
 
 .box {
-  width: 100%;
-  height: 100%;
+  width: 150px;
+  height: 150px;
   display: block;
   background: linear-gradient(100deg, red, blue);
   border-radius: 10px;
 }
 
 .box:hover {
-  transform: rotateZ(60deg) translateZ(1px) scale3d(1.1, 1.1, 1.1);
+  transform: rotateZ(60deg) translateZ(30px) scale3d(1, 1, 1);
 }
 
 .flip-scene {
@@ -36,7 +36,7 @@
   width: 100%;
 }
 .cards:hover {
-  transform: rotateY(180deg) scale(1.2);
+  transform: rotateY(180deg) scale(1.1);
 }
 
 .front-card,
@@ -52,6 +52,6 @@
   background: linear-gradient(10deg, black, red);
 }
 .back-card {
-  background: radial-gradient(circle, red, skyblue);
+  background: linear-gradient(90deg, red, skyblue);
   transform: rotateY(180deg);
 }

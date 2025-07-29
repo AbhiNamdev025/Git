@@ -1,0 +1,134 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  color: #333;
+  line-height: 1.6;
+}
+
+.note {
+  background: #fff3cd;
+  padding: 12px;
+  text-align: center;
+  color: #856404;
+  font-weight: 500;
+}
+
+/* Header */
+.header {
+  padding: 80px;
+  text-align: center;
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  color: white;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Navigation Bar */
+.navbar {
+  display: flex;
+  background-color: #343a40;
+}
+
+.navbar a {
+  color: white;
+  padding: 16px 24px;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.navbar a:hover {
+  background-color: #495057;
+  color: #fff;
+}
+
+/* Column container */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Sidebar */
+.side {
+  flex: 30%;
+  background-color: #f8f9fa;
+  padding: 30px;
+}
+
+/* Main content */
+.main {
+  flex: 70%;
+  background-color: white;
+  padding: 30px;
+  box-shadow: inset 8px 0 15px -10px rgba(0, 0, 0, 0.1);
+}
+
+/* Content blocks */
+.content-block {
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 25px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.side .content-block {
+  background-color: #e9ecef;
+}
+
+/* Footer */
+.footer {
+  padding: 30px;
+  text-align: center;
+  background: #343a40;
+  color: white;
+}
+
+/* Responsive layout */
+@media screen and (max-width: 700px) {
+  .row,
+  .navbar {
+    flex-direction: column;
+  }
+
+  .header {
+    padding: 60px 20px;
+  }
+
+  .navbar a {
+    padding: 14px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .main {
+    box-shadow: none;
+  }
+}
+
+/* Colorful elements */
+.img-placeholder {
+  background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.img-placeholder.alt {
+  background: linear-gradient(45deg, #a18cd1, #fbc2eb);
+}
+
+.img-placeholder.small {
+  background: linear-gradient(45deg, #84fab0, #8fd3f4);
+}
