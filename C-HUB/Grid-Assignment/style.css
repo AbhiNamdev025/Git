@@ -1,0 +1,109 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+  transition: all 0s ease;
+}
+
+h1 {
+  text-align: center;
+}
+
+div {
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.475);
+  padding: 12px;
+}
+
+.grid-container div:hover {
+  transform: scale(1.02);
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 200px 1fr 1fr;
+  grid-template-rows: 60px auto 50px;
+  grid-template-areas:
+    "header header header"
+    "sidebar main main"
+    "footer footer footer";
+  gap: 10px;
+  grid-auto-rows: 100px;
+  grid-auto-columns: 100px;
+}
+
+/* Grid Items */
+
+.header {
+  grid-area: header;
+  background-color: #4caf50;
+  text-align: center;
+  color: white;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: #2196f3;
+
+  color: white;
+}
+
+.main {
+  grid-area: main;
+  background-color: #ffc107;
+  padding: 15px;
+}
+
+.widget1 {
+  background-color: #ff5722;
+  grid-column: 2 / span 1;
+  grid-row: 2;
+
+  z-index: 1;
+}
+
+.widget2 {
+  background-color: #9c27b0;
+  grid-column: 3 / span 1;
+  grid-row: 2;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #607d8b;
+
+  text-align: center;
+  color: white;
+}
+
+/* Task 8: Alignment  */
+
+.grid-container {
+  justify-content: center;
+  align-content: start;
+}
+
+.header,
+.sidebar,
+.main,
+.widget1,
+.widget2,
+.footer {
+  justify-self: stretch;
+  align-self: center;
+}
+
+/* extra  */
+
+.grid-container::after {
+  content: "Extra Content";
+  background-color: #00bcd4;
+
+  grid-column: 1;
+  grid-row: 4;
+}
+
+/*  Auto-placement */
+
+.widget2 {
+  grid-column: auto;
+  grid-row: auto;
+}
