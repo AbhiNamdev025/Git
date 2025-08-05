@@ -1,0 +1,70 @@
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+  transition: all 0.3s ease;
+}
+
+body {
+  margin: 0;
+  padding: 40px;
+  background: #f3f4f6;
+}
+
+.container {
+  display: flex;
+  max-width: 900px;
+  margin: auto;
+  background: #fff;
+  border: 3px solid #2196f3;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+/* Hide radio buttons */
+input[type="radio"] {
+  display: none;
+}
+
+/* Right side buttons */
+.tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-left: 20px;
+}
+
+.tabs label {
+  padding: 15px 30px;
+  border-radius: 15px;
+  background: #2196f3;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.tabs label:hover {
+  background: #1976d2;
+}
+
+/* Left side content box */
+.content {
+  flex: 1;
+  border: 2px solid #2196f3;
+  border-radius: 20px;
+  padding: 30px;
+  background: linear-gradient(to right, #e0f7fa, #fce4ec);
+  position: relative;
+  min-height: 250px;
+}
+
+.content-area {
+  display: none;
+}
+
+#tab1:checked ~ .container .content .content1,
+#tab2:checked ~ .container .content .content2,
+#tab3:checked ~ .container .content .content3 {
+  display: block;
+}
