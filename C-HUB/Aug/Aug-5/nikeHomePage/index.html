@@ -38,11 +38,15 @@
 
     <!--  Navbar -->
     <header class="navbar">
-      <img
+      <div class="logo"><img
         src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NIKE.svg"
         alt="Nike Logo"
         class="logo"
-      />
+      /></div>
+      
+      <input type="checkbox" id="toggle-menu" />
+      <label for="toggle-menu" class="ham">≡</label>
+      
       <nav class="nav-links">
         <a href="#">New & Featured</a>
         <a href="#">Men</a>
@@ -51,6 +55,7 @@
         <a href="#">Sale</a>
         <a href="#">SNKRS</a>
       </nav>
+      
       <div class="actions">
         <input type="text" placeholder="Search" />
         <i class="fa-regular fa-heart" style="color: #000000"></i>
@@ -121,7 +126,6 @@
     </section>
 
     <!-- Featured -->
-
     <section class="featured">
       <h1>Featured</h1>
       <div class="grid-container">
