@@ -1,16 +1,3 @@
-// console.log("Table of Three");
-// for (let a = 3, i = 1; i <= 10; i++) {
-//   console.log(a * i);
-// }
-// console.log("Table of Four");
-// for (let a = 4, i = 1; i <= 10; i++) {
-//   console.log(a * i);
-// }
-// console.log("Table of Five");
-// for (let a = 5, i = 1; i <= 10; i++) {
-//   console.log(a * i);
-// }
-
 // Table Calulation
 
 function table(a) {
@@ -19,7 +6,7 @@ function table(a) {
   }
 }
 
-for (let i = 2; i <= 5; i++) {
+for (let i = 5; i <= 9; i++) {
   console.log("Table of :", i);
   table(i);
 }
