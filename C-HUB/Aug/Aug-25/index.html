@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      #myForm {
+        width: 300px;
+        height: 400px;
+        background-color: #f5f5f5;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #ccc;
+      }
+      input {
+        width: 200px;
+        height: 30px;
+        border-radius: 10px;
+        border: 1px solid #ccc;
+        padding: 5px;
+      }
+      button {
+        padding: 15px 25px;
+        border-radius: 10px;
+        border: 1px solid #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="myForm">
+      <input
+        type="text"
+        name="name"
+        id="name"
+        placeholder="Enter Name"
+        required
+      />
+      <input
+        type="email"
+        name="email"
+        id="email"
+        placeholder="Enter Email"
+        required
+      />
+      <button type="submit">Save</button>
+    </form>
+
+    <h1 id="output"></h1>
+
+    <h2 id="names"></h2>
+
+    <script src="script.js"></script>
+  </body>
+</html>
