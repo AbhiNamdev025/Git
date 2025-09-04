@@ -21,11 +21,11 @@ body {
 }
 
 .game {
-  display: grid; /* ✅ Always 3x3 grid */
+  display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5vh;
-  width: 60vmin; /* ✅ square board */
-  height: 60vmin; /* ✅ square board */
+  width: 60vmin;
+  height: 60vmin;
   padding: 1rem;
   border-radius: 20px;
   background: #e0f7fa;
@@ -33,7 +33,7 @@ body {
 }
 
 .box {
-  aspect-ratio: 1 / 1; /* ✅ keeps square shape */
+  aspect-ratio: 1 / 1;
   border-radius: 20px;
   background: #e0f7fa;
   font-size: 8vmin;
