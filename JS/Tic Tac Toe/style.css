@@ -21,13 +21,11 @@ body {
 }
 
 .game {
-  height: 60vh;
-  width: 60vw;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
+  display: grid; /* ✅ Always 3x3 grid */
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5vh;
+  width: 60vmin; /* ✅ square board */
+  height: 60vmin; /* ✅ square board */
   padding: 1rem;
   border-radius: 20px;
   background: #e0f7fa;
@@ -35,11 +33,10 @@ body {
 }
 
 .box {
-  height: 18vh;
-  width: 18vw;
+  aspect-ratio: 1 / 1; /* ✅ keeps square shape */
   border-radius: 20px;
   background: #e0f7fa;
-  font-size: 8vh;
+  font-size: 8vmin;
   color: #ff6f61;
   border: none;
   box-shadow: 8px 8px 16px #b0cfcf;
@@ -87,6 +84,50 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  .game {
+    width: 70vmin;
+    height: 70vmin;
+    gap: 2vw;
+  }
+
+  .box {
+    font-size: 10vmin;
+  }
+
+  .msg {
+    font-size: 2rem;
+  }
+
+  .reset,
+  .new {
+    font-size: 1rem;
+    padding: 10px 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .game {
+    width: 90vmin;
+    height: 90vmin;
+    gap: 2.5vw;
+  }
+
+  .box {
+    font-size: 12vmin;
+  }
+
+  .msg {
+    font-size: 1.5rem;
+  }
+
+  .reset,
+  .new {
+    font-size: 0.9rem;
+    padding: 8px 18px;
+  }
 }
 
 @keyframes fadeIn {

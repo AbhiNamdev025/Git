@@ -106,3 +106,9 @@ input[type="button"][value="0"] {
     transform: scale(1);
   }
 }
+
+@media (max-width: 768px) {
+  .calculator {
+    margin: 1rem 2rem;
+  }
+}
