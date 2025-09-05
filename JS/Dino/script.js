@@ -6,6 +6,9 @@ let counter = document.getElementById("counter");
 let highest = document.getElementById("highest");
 let restartBtn = document.getElementById("restartBtn");
 
+let bgMusic = document.getElementById("bgMusic");
+let gameOverSound = document.getElementById("gameOverSound");
+
 let emojis = ["💣", "🌵", "🔥", "🚧", "🪨", "⚡"];
 let index = 0;
 
@@ -17,6 +20,11 @@ setInterval(() => {
 let num = 0;
 let highScore = 0;
 let scoreInterval;
+
+bgMusic.volume = 0.5;
+gameOverSound.volume = 0.4;
+
+bgMusic.play();
 
 jumpBtn.addEventListener("click", () => {
   dino.classList.add("jump");
@@ -35,6 +43,10 @@ let Collision = () => {
     restartBtn.style.display = "block";
     clearInterval(scoreInterval);
 
+    bgMusic.pause();
+    bgMusic.currentTime = 0;
+    gameOverSound.play();
+
     if (num > highScore) {
       highScore = num;
       highest.textContent = highScore;
@@ -49,6 +61,7 @@ restartBtn.addEventListener("click", () => {
   restartBtn.style.display = "none";
   obstacle.style.animation = "move 1.5s linear infinite";
   startscore();
+  bgMusic.play();
 });
 
 function startscore() {
@@ -67,5 +80,6 @@ function getfromlocal() {
     highest.textContent = highScore;
   }
 }
+
 startscore();
 getfromlocal();

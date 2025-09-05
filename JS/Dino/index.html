@@ -6,6 +6,11 @@
     <title>Dino Game</title>
     <link rel="stylesheet" href="style.css" />
     <link
+      rel="shortcut icon"
+      href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJjCPeYd5cEM-XH8-ib_-Wn-xHEDZLAL11kg&s"
+      type="image/x-icon"
+    />
+    <link
       href="https://fonts.googleapis.com/css?family=Orbitron"
       rel="stylesheet"
     />
@@ -15,7 +20,10 @@
     />
   </head>
   <body>
-    <div class="score">
+    <audio id="bgMusic" src="./Music/bgmusic.mp3" loop></audio>
+    <audio id="gameOverSound" src="./Music/gameover.mp3"></audio>
+
+    <div class="score cover">
       <h2>
         High Score:
         <h3 id="highest"></h3>
