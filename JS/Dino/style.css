@@ -97,6 +97,7 @@ body {
   justify-content: space-between;
   width: 90%;
   max-width: 300px;
+  flex-direction: column;
 }
 
 button {
