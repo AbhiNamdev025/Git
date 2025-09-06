@@ -26,12 +26,34 @@ gameOverSound.volume = 0.4;
 
 bgMusic.play();
 
+// jump button
 jumpBtn.addEventListener("click", () => {
   dino.classList.add("jump");
   setTimeout(() => {
     dino.classList.remove("jump");
   }, 700);
 });
+
+// space,enter button
+document.addEventListener("keydown", (e) => {
+  if ((e.key === " ", "enter")) {
+    dino.classList.add("jump");
+    setTimeout(() => {
+      dino.classList.remove("jump");
+    }, 700);
+  }
+});
+
+//for mobile
+
+document.addEventListener("touchstart", () => {
+  dino.classList.add("jump");
+  setTimeout(() => {
+    dino.classList.remove("jump");
+  }, 700);
+});
+
+// collision
 
 let Collision = () => {
   let dinoTop = dino.offsetTop;
