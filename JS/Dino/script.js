@@ -9,7 +9,7 @@ let restartBtn = document.getElementById("restartBtn");
 let bgMusic = document.getElementById("bgMusic");
 let gameOverSound = document.getElementById("gameOverSound");
 
-let emojis = ["💣", "🌵", "🔥", "🚧", "🪨", "⚡"];
+let emojis = ["💣", "🌵", "🔥", "🚧", "🪨", "⚡", "🔫", "🔨", "🤛🏻"];
 let index = 0;
 
 setInterval(() => {
@@ -26,35 +26,32 @@ gameOverSound.volume = 0.4;
 
 bgMusic.play();
 
-// jump button
-jumpBtn.addEventListener("click", () => {
-  dino.classList.add("jump");
-  setTimeout(() => {
-    dino.classList.remove("jump");
-  }, 700);
-});
-
-// space,enter button
-document.addEventListener("keydown", (e) => {
-  if ((e.key === " ", "enter")) {
+//  jump
+function jump() {
+  if (!dino.classList.contains("jump")) {
     dino.classList.add("jump");
     setTimeout(() => {
       dino.classList.remove("jump");
     }, 700);
   }
+}
+
+// jump button
+jumpBtn.addEventListener("click", jump);
+
+// space nd enter
+document.addEventListener("keydown", (e) => {
+  if (e.code === "Space" || e.code === "Enter") {
+    jump();
+  }
 });
 
-//for mobile
-
+// touchscreen
 document.addEventListener("touchstart", () => {
-  dino.classList.add("jump");
-  setTimeout(() => {
-    dino.classList.remove("jump");
-  }, 700);
+  jump();
 });
 
 // collision
-
 let Collision = () => {
   let dinoTop = dino.offsetTop;
   let obstacleLeft = obstacle.offsetLeft;
