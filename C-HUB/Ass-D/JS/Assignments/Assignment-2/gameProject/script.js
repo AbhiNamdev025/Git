@@ -20,7 +20,7 @@ function checkGuess() {
 }
 
 function resetGame() {
-  num = Math.floor(Math.random() * 100) + 1;
+  num = Math.floor(Math.random() * 100) ;
   attempts = 0;
   document.getElementById("msg").textContent = "";
   document.getElementById("guess").value = "";
