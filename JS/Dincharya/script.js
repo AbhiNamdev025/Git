@@ -4,7 +4,6 @@ let error = document.querySelector(".error");
 let textInput = document.querySelector("#text-input");
 let tasks = document.querySelector(".tasks");
 let deleted = document.querySelector(".deleted");
-let edited = document.querySelector(".edit");
 
 function popup(element) {
   element.style.display = "flex";
@@ -20,17 +19,12 @@ function createTask(taskText) {
   taskDiv.innerHTML = `
     <span class="taskName">${taskText}</span>
     <div><button class="del">🗑️</button>
-    <button class="edit">✏️</button></div>
   `;
 
   taskDiv.querySelector(".del").addEventListener("click", () => {
     taskDiv.remove();
     removeFromLocal(taskText);
     popup(deleted);
-  });
-
-  taskDiv.querySelector(".edit").addEventListener("click", () => {
-    popup(edited);
   });
 
   tasks.appendChild(taskDiv);
