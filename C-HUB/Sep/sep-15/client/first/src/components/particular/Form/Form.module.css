@@ -1,0 +1,52 @@
+.form h2 {
+  color: black;
+  margin-top: 30px;
+  border-bottom: 1px solid #999;
+  padding-bottom: 5px;
+}
+.form form {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  width: 250px;
+  background: white;
+}
+.from input {
+  border-radius: 3px;
+}
+
+.cardsignup {
+  border: 1px solid violet;
+  border-radius: 5px;
+  padding: 20px;
+  width: 250px;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.cardsignup label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.cardsignup input {
+  display: block;
+  margin-bottom: 15px;
+  padding: 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.cardsignup button {
+  padding: 8px 15px;
+  background: #2196f3;
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 5px;
+}
+.cardsignup input:focus {
+  border: 3px solid #1976d2;
+  outline: none;
+}
