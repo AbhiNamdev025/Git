@@ -1,0 +1,28 @@
+.loader {
+  width: 100px;
+  height: 10px;
+  background-color: #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+.bar {
+  width: 40px;
+  height: 10px;
+  background-color: lightskyblue;
+  border-radius: 8px;
+  position: absolute;
+  animation: load 2s infinite linear;
+}
+
+@keyframes load {
+  0% {
+    left: -30px;
+  }
+  50% {
+    left: 50px;
+  }
+  100% {
+    left: 110px;
+  }
+}

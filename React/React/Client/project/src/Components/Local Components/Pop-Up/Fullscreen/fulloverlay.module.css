@@ -1,0 +1,47 @@
+.overlayToggle {
+  display: none;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.80);
+  width: 100vw;
+  height: 100vh;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s ease;
+  text-align: center;
+  z-index: 1;
+}
+
+.overlayContent {
+  color: white;
+  background: #1a1a1a;
+  padding: 30px;
+  border-radius: 10px;
+  display: inline-block;
+  margin-top: 10vh;
+  max-width: 350px;
+}
+
+.overlayImg {
+  height: 300px;
+  width: 300px;
+  padding-bottom: 20px;
+}
+
+.overlayToggle:checked + .overlay {
+  visibility: visible;
+  opacity: 1;
+}
+
+.overlayBtn {
+  padding: 10px 20px;
+  border-radius: 6px;
+  background: lightseagreen;
+  color: white;
+  cursor: pointer;
+  margin-top: 10px;
+}

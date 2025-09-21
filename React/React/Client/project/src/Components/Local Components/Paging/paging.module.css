@@ -1,0 +1,44 @@
+.container {
+  text-align: center;
+  padding: 50px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.container h1 {
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.pagination {
+  display: flex;
+  background: #fff;
+  width: fit-content;
+}
+
+.pagination a {
+  color: #555;
+  padding: 12px 20px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 16px;
+  border-right: 1px solid #eee;
+}
+.pagination a:first-child {
+  border-right: none;
+  border-radius: 50px 0px 0px 50px;
+}
+.pagination a:last-child {
+  border-right: none;
+  border-radius: 0px 50px 50px 0px;
+}
+
+.pagination a:hover {
+  background: lightskyblue;
+  color: #fff;
+}
+
+.active {
+  background: lightskyblue;
+  color: #fff !important;
+  font-weight: bold;
+}

@@ -1,0 +1,21 @@
+.Secondary button {
+  padding: 15px 25px;
+  border: none;
+  color: gray;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: large;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+  background-color: lightyellow;
+  border: 1px solid gray;
+}
+
+.Secondary button:hover {
+  transform: scale(1.1);
+}
+.Secondary button:focus,
+.Secondary button:hover {
+  box-shadow: 5px 5px 5px #ccc;
+  background-color: yellow;
+}

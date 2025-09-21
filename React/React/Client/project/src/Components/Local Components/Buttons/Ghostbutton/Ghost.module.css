@@ -1,0 +1,19 @@
+.Ghost button {
+  padding: 15px 25px;
+  border: none;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: large;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+  background-color: transparent;
+}
+
+.Ghost button:hover {
+  transform: scale(1.1);
+}
+.Ghost button:focus,
+.Ghost button:hover {
+  text-decoration: underline;
+}

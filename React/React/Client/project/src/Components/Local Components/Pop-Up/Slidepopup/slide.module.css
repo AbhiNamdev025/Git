@@ -1,0 +1,18 @@
+.slideBox {
+  position: fixed;
+  bottom: 20px;
+  right: -300px;
+  padding: 12px 20px;
+  background: #38b000;
+  color: white;
+  border-radius: 6px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  animation: slideIn 0.5s forwards;
+  z-index: 999;
+}
+
+@keyframes slideIn {
+  to {
+    right: 20px;
+  }
+}

@@ -1,0 +1,30 @@
+.bouncer {
+  display: flex;
+  align-items: center;
+}
+
+.bouncer span {
+  width: 12px;
+  height: 12px;
+  margin-right: 4px;
+  background-color: lightskyblue;
+  border-radius: 50%;
+  animation: bouncing 0.5s infinite alternate;
+}
+
+@keyframes bouncing {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-8px);
+    opacity: 0.5;
+  }
+}
+
+.bouncer .sec {
+  animation-delay: 0.15s;
+}
+.bouncer .third {
+  animation-delay: 0.3s;
+}

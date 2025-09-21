@@ -1,0 +1,22 @@
+.ring {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: 6px solid transparent;
+  border-right: 6px solid lightskyblue;
+  border-left: 6px solid lightskyblue;
+  animation: spining 2s infinite linear;
+  transition: animation 0.3s ease;
+}
+
+@keyframes spining {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

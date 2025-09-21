@@ -1,0 +1,42 @@
+.hoverCard {
+  position: relative;
+  display: inline-block;
+  margin: 10px;
+}
+
+.profilePreview {
+  display: inline-block;
+  padding: 8px 15px;
+  border-radius: 6px;
+  background: #e9ecef;
+  cursor: pointer;
+  text-align: center;
+}
+
+.profileImg {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+.cardPopup {
+  position: absolute;
+  top: 80%;
+  width: 200px;
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  display: none;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.hoverCard:hover .cardPopup {
+  display: block;
+}

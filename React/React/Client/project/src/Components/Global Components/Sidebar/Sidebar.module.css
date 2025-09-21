@@ -1,0 +1,125 @@
+.Sidebar {
+  width: 200px;
+  height: 97vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border-right: 1px solid #ccc;
+}
+.Sidebartop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  flex-direction: column;
+}
+.nav {
+  height: 90%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.navlinks {
+  display: flex;
+  gap: 25px;
+  flex-direction: column;
+}
+
+.navlinks .navlink {
+  text-decoration: none;
+  color: black;
+  position: relative;
+  display: block;
+}
+.logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: lightskyblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: xx-large;
+}
+.logo:hover span {
+  animation: dance 0.8s ease-in;
+}
+
+@keyframes dance {
+  0% {
+    transform: rotateY(0deg);
+  }
+  25% {
+    transform: rotateY(90deg);
+  }
+  50% {
+    transform: rotateY(180deg);
+  }
+  25% {
+    transform: rotateY(270deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+.navlinks .navlink::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 4px;
+  border-radius: 2px;
+  background-color: skyblue;
+  transition: width 0.3s ease-in;
+  cursor: pointer;
+}
+.actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.actions .navlink {
+  text-decoration: none;
+}
+
+/* Dropdown */
+
+.dropdown {
+  position: relative;
+  display: block;
+}
+
+.dropdownContent {
+  display: none;
+  position: absolute;
+  top: 25px;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  z-index: 1;
+  flex-direction: column;
+}
+
+.dropdownContent .navlink {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdownContent .navlink:hover {
+  background-color: #f1f1f1;
+}
+.dropdown:hover .dropdownContent {
+  display: block;
+}
+
+.navlinks .navlink:hover::before {
+  width: 100%;
+}
