@@ -4,6 +4,10 @@ const cors = require("cors");
 
 const getUserData = require("./Backend/Routes/getRoute/getRoute");
 const postUserData = require("./Backend/Routes/postRoute/postRoute");
+const DeleteUserData = require("./Backend/Routes/Delete Route/deleteRoute");
+const UpdateUserData = require("./Backend/Routes/Update Route/updateRoute");
+
+
 
 const app = express();
 
@@ -17,6 +21,10 @@ mongoose
 
 app.use("/add", postUserData);
 app.use("/find", getUserData);
+app.use("/api", DeleteUserData);
+app.use("/api", UpdateUserData);
+
+
 
 app.listen(2525, () => {
   console.log("server is running on 2525");

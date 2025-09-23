@@ -1,0 +1,61 @@
+.card {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border-radius: 2px solid #111;
+  padding: 18px;
+  background-color: rgba(255, 166, 2, 0.269);
+}
+
+.cardContainer {
+  display: flex;
+  max-width: 1200px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.delBtn {
+  background-color: blueviolet;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  border: 2px solid #ccc;
+}
+
+.btnGroup {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); /* dull background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  position: relative;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.closeBtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
