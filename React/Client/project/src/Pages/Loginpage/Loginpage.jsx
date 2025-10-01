@@ -6,21 +6,11 @@ import BasicSignup from "../../Components/Local Components/Forms/basicSignup/Bas
 import Card from "../../Components/Local Components/Forms/Daa Card/card";
 
 const Loginpage = () => {
-
-
-
-  
-
-
-
-
-
   return (
     <>
       <Header />
       <BasicSignup />
       <Card />
-      {/* <Fixedfooter /> */}
     </>
   );
 };
