@@ -1,0 +1,35 @@
+
+name: Daily GitHub Contribution
+
+on:
+  schedule:
+    # Daily at 00:10 UTC (05:40 IST)
+    - cron: "10 0 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  daily-update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Update daily development log
+        run: |
+          mkdir -p daily-logs
+          printf '%s - Daily repository maintenance check\n' \
+            "$(TZ=Asia/Kolkata date +%F)" \
+            >> daily-logs/activity.md
+
+      - name: Commit and push log update
+        run: |
+          git config user.name "${{ github.actor }}"
+          git config user.email \
+            "${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com"
+          git add daily-logs/activity.md
+          git commit -m "chore: update daily development log"
+          git push
